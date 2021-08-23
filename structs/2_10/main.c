@@ -61,14 +61,14 @@ int sort(struct array_t *arr) {
     return 0;
 }
 
-int readStdInput(char *path) {
+int read_std_input(char *path) {
     if (scanf("%30s", path) == 0){
         return 1;
     }
     return 0;
 }
 
-void cleanStdInput(void) {
+void clean_std_input(void) {
     int c;
     do {
         c = getchar();
@@ -82,11 +82,11 @@ int main() {
     char path[31];
     printf("Podaj sciezke do pliku:\n");
 
-    if (readStdInput(path)){
+    if (read_std_input(path)){
         printf("Incorrect input");
         return 1;
     }
-    cleanStdInput();
+    clean_std_input();
 
     struct array_t arr_out;
 
